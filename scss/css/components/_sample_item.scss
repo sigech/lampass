@@ -1,0 +1,88 @@
+@charset "utf-8";
+@import 'compass';
+
+#sample_itm {
+  grid-area: sample_itm;
+  position: relative;
+  width: 100%;    //全体幅
+  overflow: hidden;
+  margin-bottom: 50px;
+  
+  border: solid 1px red;
+  
+ .rooms_column {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: 1px solid #dfdfdf;
+    float: left;
+    margin-right: 10px;
+    margin-top: 40px;
+    padding: 10px 10px 12px;
+    position: relative;
+    width: 400px;
+    .page_ttl{
+ //       font-size: x-large;
+//        color: blue;
+  //   padding: 186px 0 0;
+        height: 2.0em;
+        overflow: hidden;
+        color: #333;
+        margin: 0;
+        font-size: 100%;
+        border: none;
+        a {
+            color: #333333;
+            &:link,    //未訪問のリンクの色
+            &:visited {//訪問済みのリンクの色
+                color: #333333;
+            }
+            &:hover,
+            &:active {//クリック中のリンクの色
+                color: #66a5ed;
+                text-decoration: underline;
+            }
+        }
+    }
+    .branch_info{
+        table {
+            width: 380px;
+            border-collapse: collapse;
+            border: solid 2px orange;/*表全体を線で囲う*/
+            th{
+                width: 150px;
+                font-size: 100%;
+                border: dashed 1px orange;/**/
+                /*破線 1px オレンジ*/
+            }
+            td {
+                width: 250px;
+                border: dashed 1px orange;/**/
+            /*破線 1px オレンジ*/
+            }
+        /*余白と文字装飾は省略*/
+        }
+    }
+  }
+// =====================
+//トップページ固有のスタイル
+//=====================
+.IndexPage {
+    &__foodMenu,
+    &__drinkMenu {
+        display: flex;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__drinkMenu {
+        background-image: url('#{$image-path}top/menu_drink.jpg');
+    }
+    &__foodMenu {
+        background-image: url('#{$image-path}top/menu_food.jpg');
+    }
+}
+  
+}

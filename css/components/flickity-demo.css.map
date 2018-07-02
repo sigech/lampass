@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAEA;;mDAEmD;AACnD,WAAW;EACV,KAAK,EAAC,KAAK;EACX,SAAS,EAAC,GAAG;EACb,aAAa,EAAC,GAAG;EAAE,uCAAuC;EACnD,MAAM,EAAE,MAAM;;AAEtB,kBAAkB;AAClB,aAAa;EACZ,OAAO,EAAC,KAAK;EAAE,eAAe;;AAE/B,aAAa;EACZ,OAAO,EAAC,KAAK;EAAE,eAAe;;AAE/B,kBAAkB;AAClB,WAAW;EACV,KAAK,EAAC,KAAK;EACX,SAAS,EAAC,IAAI;EACd,MAAM,EAAC,KAAK",
+"sources": ["../../scss/css/components/flickity-demo.scss"],
+"names": [],
+"file": "flickity-demo.css"
+}

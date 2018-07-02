@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import 'compass';
+//mainをgridに配置
+main{
+    grid-area: main; 
+    margin:0 auto;
+    
+    width: 100%;
+    height:auto;
+    
+    border: 1px solid black;
+}
+
+.full_content {
+        width:650px;
+        height:380px;
+        position:relative;
+        margin:20px auto;
+        clear:both;
+        .menu{
+            width:100px;
+            height:65px;
+            background:#B99DC6;
+            float:left;
+            list-style:none;
+            padding:10px 0 0;
+            margin-left:2px;
+            text-align:center;
+            display:block !important;
+            cursor: pointer;
+            color:#FFF;
+            &:first-child {
+                margin-left:0;
+            }
+            &.hover {
+                background:#9C9;
+                font-weight:bold;
+                display:block !important;
+            }
+        }
+        .content {
+            width:100%;
+            height:320px;
+            border:#9C9 5px solid;
+            background:#FFF;
+            position:absolute;/*topプロパティの値は、positionプロパティの値がstatic以外のときに有効となります*/
+            top:70px; /* ボックスを配置する場合の、上からの配置位置（距離）*/
+            left:0;
+            padding:10px;
+        }
+}
+#role_button ul, li {
+   margin:0;
+   padding:0;
+}
+#role_button li {
+   list-style:none;
+   float:left;
+}
+.grey {
+   color:#616161;/*フォントとアイコンの色*/
+}
+.animation_button {
+   background:#83BEC5;/*背景色*/
+   width:80px;
+   height:68px;
+   margin:10px 5px;
+   text-align:center;
+   line-height:1.4;
+   padding:22px 10px 10px;
+   border-radius: 80px;
+   -webkit-border-radius: 80px;/*Safari & Chrome */
+   transiton:all 0.5s ease;/*アニメーションの設定*/
+   -webkit-transition: all 0.5s ease;/*Safari & Chrome */
+   -moz-transition: all 0.5s ease;/*FireFox */
+   -ms-transition: all 0.5s ease;/*IE*/
+   border:2px solid #F2F2F2;
+   font-family: 'Open Sans Condensed', sans-serif;
+   float:left;
+   font-weight:bold;
+}
+.animation_button:hover{/*マウスオーバー時*/
+   background:#F76D8A;/*背景色*/
+   animation: kaiten 1s;
+   animation-iteration-count: 2;/*アニメーションの繰り返し回数*/
+   -webkit-animation: kaiten 1s; /*Safari & Chrome */
+   -webkit-animation-iteration-count: 2;/*Safari & Chrome */
+}
+ 
+@keyframes kaiten {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); } 
+ 
+}
+@-webkit-keyframes kaiten { /*Safari & Chrome */
+   0% { -webkit-transform: rotate(0deg); }
+   100% { -webkit-transform: rotate(360deg); } 
+}

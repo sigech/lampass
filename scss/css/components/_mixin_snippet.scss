@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import 'compass';
+
+@mixin center {	//上下左右中央配置
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin link-color($color) { //リンクカラーの生成
+    color: $color;
+    &:hover, &:active, &:focus {
+        color: lighten($color, 20%);
+    }
+}
+
+@mixin opacity($opacity) { //透明度の指定
+    opacity: $opacity;
+    $ieopacity: ($opacity * 100);
+    filter: alpha(opacity=$ieopacity);
+}
+
+@mixin font-size($size, $base: 16) { //フォントサイズの指定 (rem対応)
+    font-size: $size + px; //rem未対応時に使用
+    font-size: ($size / $base) + rem;
+}
+
+@mixin trianglearrow($direction: right, $size: 12, $color: $gray){//三角矢印
+    $set: left;
+    @if $direction == left{
+        $set: right;
+    }@elseif $direction == top{
+        $set: bottom;
+    }@elseif $direction == bottom{
+        $set: top;
+    }@else{
+        $set: left;
+    }
+    $size: round($size / 2);
+
+    width: 0;
+    height: 0;
+    border: $size + px solid transparent;
+    border-#{$set}-color: $color;
+}
+
+@mixin arrow($size, $border-width, $border-style, $border-color, $direction) { //矢印
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    width: $size;
+    height: $size;
+    margin-top: - ($size / 2);
+    border: $border-width $border-style $border-color;
+    @if $direction == up {
+        -webkit-transform: rotate(-135) + deg;
+        -moz-transform: rotate(-135) + deg;
+        transform: rotate(-135) + deg;
+    }
+    @else if $direction == under {
+    -webkit-transform: rotate(45) + deg;
+    -moz-transform: rotate(45) + deg;
+    transform: rotate(45) + deg;
+    }
+    @else if $direction == right {
+        -webkit-transform: rotate(-45) + deg;
+        -moz-transform: rotate(-45) + deg;
+        transform: rotate(-45) + deg;
+    }
+    @else if $direction == left {
+        -webkit-transform: rotate(135) + deg;
+        -moz-transform: rotate(135) + deg;
+        transform: rotate(135) + deg;
+    }
+    @else {
+        -webkit-transform: rotate($direction) + deg;
+        -moz-transform: rotate($direction) + deg;
+        transform: rotate($direction) + deg;
+    }
+}
+
+@mixin bg-gradient($angle: 180deg, $color: #0bd, $amount: 20%) {//モダンなグラデーション背景
+    background: linear-gradient($angle, $color, adjust-hue($color, $amount)) fixed;
+}
+
+@mixin gradient-text($angle: 45deg, $color: #f82, $amount: 35%) {//文字にグラデーション
+    color: $color;
+    background: -webkit-linear-gradient($angle, $color, adjust-hue($color, $amount));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+//    display: inline-block;
+}
+
+@mixin truncate($width: 100%) {//長文 テキストを枠内に収める
+    width: $width;
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* mixinの定義 */
+@mixin link-colors($color) {
+  color: $color;
+  text-decoration: none;
+  &:hover {
+    color: lighten($color, 15%);
+    text-decoration: underline;
+  }
+  &:visited {
+    color: desaturate($color, 50%);
+  }
+}
+/* mixinの定義 */
+@mixin bg-gradient($angle: 180deg, $color: #0bd, $amount: 20%) {
+  background: linear-gradient($angle, $color, adjust-hue($color, $amount)) fixed;
+}
+
+@mixin circle {//divは通常長方形ですが、これを利用すると円形に変えることができます。
+ @include border-radius(100%);
+ }
+ 
+ @mixin box-shadow( $h: 10px , $v: 10px , $b: 0px , $s: 0px , $c: #000000 ) {
+ -webkit-box-shadow: $h $v $b $s $c;
+ -moz-box-shadow: $h $v $b $s $c;
+ box-shadow: $h $v $b $s $c;
+ }

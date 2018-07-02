@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import 'compass';
+
+table {
+  border: 1px solid #cccccc;
+  width: 100%;
+}
+table th, table td {
+  border: 1px solid #cccccc;
+  padding: 10px;
+}
+
+table th {
+  background: #EEE;
+  text-align: left;
+  width: 30%;
+}
+
+table.info {
+  width: 100%;
+  border-top: 1px solid #cccccc;
+}
+
+table.info th, table.info td {
+  border-bottom: 1px solid #cccccc;
+  padding: 8px 5px 5px 5px;
+  text-align: left;
+  vertical-align: top;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+table.info th img, table.info td img {
+  vertical-align: bottom;
+  margin-left: 15px;
+}
+
+table.info th.bBnone, table.info td.bBnone {
+  border-bottom: none;
+}

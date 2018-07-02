@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/*　for PC　*/
+/*　画面サイズが1024px以上はここを読み込む
+表示ﾚｲｱｳﾄの幅を1024pxで設定(1frなし時)
+*/
+body {
+  display: grid;
+  display: -ms-grid;
+  justify-content: center;
+  /*グリッド全体を中央に寄せる設定 */
+  grid-template-columns: 250px 550px 100px 200px 250px;
+  /*max*/
+  grid-template-rows: 100px 200px 1fr 300px;
+  /*行*/
+  -ms-grid-columns: 250px 550px 100px 200px 250px;
+  /*max*/
+  -ms-grid-rows: 100px 600px 200px 200px 200px 1fr 500px 300px;
+  /*行*/
+  grid-gap: 1px;
+  grid-template-areas: "title_logo gnav gnav gnav imqu" "carousel carousel carousel carousel carousel" "main main main sidebar_inq sidebar_inq" "footer footer footer footer footer"; }
+
+main {
+  grid-area: main; }
+
+carousel {
+  grid-area: carousel; }
+
+nav {
+  grid-area: gnav; }
+
+.container {
+  width: 700px;
+  height: 100px; }
+
+.gblnv_block_class {
+  margin-top: 10px; }
+
+.collapse {
+  width: 700px;
+  margin: 0 auto;
+  display: table;
+  font-size: 16px;
+  list-style: none; }
+
+.navbar-nav li {
+  display: table-cell;
+  vertical-align: middle; }
+
+.navbar-nav a {
+  height: 80px;
+  width: 100%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  background: #000;
+  color: #fff;
+  border-right: 1px solid red; }
+
+#fa li.menu-item a span {
+  font-size: 10px;
+  font-size: 10rem;
+  color: #999;
+  text-shadow: 0 1px #fff;
+  text-align: center;
+  font-family: verdana, Arial, Helvetica, sans-serif; }
+
+.navbar-nav li:first-child a {
+  border-left: 1px solid red; }
+
+.navbar-nav li a:hover {
+  background: #999; }
+
+.navbar-brand {
+  display: none; }
+
+/*# sourceMappingURL=inquiry_set.css.map */

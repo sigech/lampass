@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import 'compass';
+/**************************************************
+	デモ用のスタイルシート
+**************************************************/
+.lp-gallery{
+	width:950px;
+	max-width:95%;
+	margin-bottom:5em;	/* スライド下部にドットナビを配置する場合は、その分のスペースを加える */
+        margin: 0 auto;
+}
+/* HTMLギャラリーのセル */
+.sample-cell1{
+	padding:0 1px;	/* セル同士のスペース */
+}
+.sample-cell2{
+	padding:0 1px;	/* セル同士のスペース */
+}
+/* ギャラリー内のimg要素 */
+.sample-img{
+	width:200px;
+	max-width:none;
+	height:150px;
+}

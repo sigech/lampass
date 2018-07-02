@@ -1,0 +1,37 @@
+@charset "utf-8";
+@import 'compass';
+
+// 節の見出し
+.sectionLabel { //要素を「Flexboxコンテナー」へ
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;//フレックスアイテムをフレックスコンテナーの
+    //領域に収めるために、どのように 伸長/収縮/最小形状 させるかを指定します。
+    padding-top: $space-unit;
+    padding-bottom: $space-unit*2;
+    color: $color-main-text;
+    text-transform: uppercase;
+ //  font-size: 22px;
+    @include font-size($size:44);
+    line-height: 1;
+    &::before,
+    &::after {
+        display: block;
+        flex: 1 0 10%;
+        height: 0;
+        border-bottom: 1px solid $color-main-text;
+        content: '';//疑似要素の表示に必要
+    }
+    &::before {
+        margin-right: 22px;
+    }
+    &::after {
+        margin-left: 22px;
+    }
+}
+
+.TestLabel {
+ //   @include trianglearrow($direction: right, $size: 12, $color: black); 
+    @include font-size($size:66);
+    @include gradient-text(); 
+}

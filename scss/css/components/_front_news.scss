@@ -1,0 +1,116 @@
+@charset "utf-8";
+@import 'compass';
+
+ #top_info {
+  position: relative;
+  
+border: 1px solid red;
+}
+
+#top_info .inner {
+  padding: 3px 0 0;
+}
+
+#top_info h2 {
+  padding: 4px 0 0;
+  margin: 0;
+  border: none;
+}
+
+#top_info ul {
+/* margin:0 0 0 0; (上)　(右)　(下)　(左) */
+/* margin:0 0 0; (上)　(左右)　(下) */
+  margin: 15px 0 30px;
+}
+
+#top_info ul li {
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+  width: 710px;
+  line-height: 1.7em;
+  border-bottom: 1px dotted #b2b2b2;
+}
+
+/* ある要素内で最初に現れる子要素を対象にスタイルを適用します */
+#top_info ul li:first-child {
+  padding-top: 10px;
+  border-top: 1px dotted #b2b2b2;
+}
+
+#top_info .news_date {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+
+#top_info .news_category {
+  display: block;
+  float: left;
+  width: 80px;
+  height: 15px;
+  margin-top: 3px;
+  margin-right: 12px;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  color: #fff;
+  background-image: url("../images/category-tag-corners.png");
+  background-repeat: no-repeat;
+  background: #00a0e9;
+}
+
+#top_info .news_category.wordpress-slug {
+  background-color: #f3a059;
+}
+
+#top_info .news_category.php-slug {
+  background-color: #0396c7;
+}
+
+#top_info .news_category.jquery-slug {
+  background-color: #5a3686;
+}
+
+#top_info .news_category.ir {
+  background-color: #009678;
+}
+
+#top_info h3 {
+  width: 520px;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+#top_info h3 a {
+  color: #3a7fcf;
+}
+
+#top_info h3 a:link, #top_info h3 a:visited {
+  color: #3a7fcf;
+}
+
+#top_info h3 a:hover, #top_info h3 a a:active {
+  color: #66a5ed;
+  text-decoration: underline;
+}
+
+.list_link {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+}
+
+.list_link a {
+  margin: 0;
+  display: block;
+}
+
+.list_link a img {
+  margin: 0;
+}
+

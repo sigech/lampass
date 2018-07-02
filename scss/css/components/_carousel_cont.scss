@@ -1,0 +1,85 @@
+@charset "utf-8";
+@import 'compass';
+
+/* カルーセル  css*/
+/*
+.carousel-inner img{
+    width: 100%;
+}
+.img-carousel{
+    height: 200px;
+}
+
+.carousel{
+  height: 200px;
+  margin:auto;
+}
+.carousel .item {
+  height: 100%;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+}
+
+
+@media (min-width: 320px) {
+  .carousel,
+  .carousel .item,
+  .carousel .item-mask,
+  .carousel-inner .item .item-mask img {
+    height:200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel,
+  .carousel .item,
+  .carousel .item-mask,
+  .carousel-inner .item .item-mask img {
+    height:400px;
+  }
+}
+
+*/
+#carousel {
+  grid-area: carousel;
+}
+.carousel-caption{
+    position: absolute;
+    top:100px;
+    left:200px;
+    color: #fff;
+ /*   background: rgba(0,0,0,.6); */
+    width: auto;
+    height: auto;
+    max-width: 800px;
+    max-height: 300px;
+    padding: 1em 0;
+    line-height: 30px;
+    
+        border: solid 3px #ccc;
+}
+.google-icon{
+    position:static;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+}
+.carousel-caption a:hover img{
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity:0.5;
+}
+.cover_im1{
+    position:static;
+    background: rgba(0,0,0,.6); 
+    width: 100%;
+    height: auto;
+}
+.carousel-caption .sbs1{
+    position: absolute;
+    top:0px;
+    left:0px;
+}

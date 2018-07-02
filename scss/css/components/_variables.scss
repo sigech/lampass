@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import 'compass';
+// _variables.scss
+// Scaffolding
+$body-bg: #fff !default;
+$text-color: #212121 !default;
+$link-color: #2962ff !default;
+$link-hover-color: darken($link-color, 5%) !default;
+// Gutter
+$gutter: 20px !default;
+$gutter-large: $gutter * 2 !default;
+// sizes
+$title_logo_size_w:250px !default;
+$title_logo_size_h:120px !default;
+
+$base-content-width: 1180px !default;
+$space-unit: 20px !default;
+$sp-space-unit: 15px !default;
+$column-space: $space-unit*2 !default;
+// colors
+$color-white: #fff !default;
+$color-black: #252525 !default;
+$color-base: #fbf7f3 !default;
+$color-main-text: #474747 !default;
+$color-link: #878378 !default;
+$color-reverse-line: #fff !default;
+$color-reverse-fill: #252525 !default;
+// paths
+$image-path: "../images/" !default;

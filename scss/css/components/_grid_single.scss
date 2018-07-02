@@ -1,0 +1,181 @@
+@charset "utf-8";
+@import 'compass';
+/*モバイルファースト*/
+/* iPhone 縦 */
+@media screen and (min-width:100px) { 
+/*　for iPhone Landscape　(iPhone 横)　*/
+/*　画面サイズが480pxからはここを読み込む　*/
+body {
+   display: grid;
+   display:-ms-grid;
+   grid-template-columns: 200px 1fr;
+   -ms-grid-columns:200px 1fr;
+   grid-template-rows: 60px 100px 1fr 1fr 1fr 1fr 1fr 1fr 100px;
+   grid-template-areas:
+      "mail mail"
+      "gnav gnav"
+      "carousel carousel"
+      "mainf1 mainf1"
+      "mainf2 mainf2"
+      "main main"
+      "side1 side1"
+      "side2 side2"
+      "footer footer";
+  }
+  
+#mail a .example_mail{
+ left: 50%;
+ max-height: 70%;
+ max-width: 70%;
+ min-height: 40%;
+ min-width: 40%;
+ position: absolute;
+ top:50%;
+ transform: translate(-50%, -50%);
+}
+}
+@media screen and (min-width:768px) and ( max-width:1260px) {
+    /*　for iPad 　*/
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+    body {
+   display: grid;
+   justify-content: center; /* グリッド全体を中央に寄せる設定 */
+   grid-template-columns: 250px 1fr 1fr 250px;
+   grid-template-rows: 100px 60px 1fr 1fr 1fr 1fr 250px;
+   grid-gap: 1px;
+   grid-template-areas:
+    "header mail mail mail"
+    "gnav gnav gnav gnav"
+    "carousel carousel carousel carousel"
+    "mainf1 mainf1 mainf1 mainf1"
+    "mainf2 mainf2 mainf2 mainf2"
+    "main main side1 side1"
+    "footer footer footer footer";
+}
+#mail a .example_mail{
+ left: 50%;
+ max-height: 90%;
+ max-width: 90%;
+ min-height: 70%;
+ min-width: 70%;
+ position: absolute;
+ top:50%;
+ transform: translate(-50%, -50%);
+}
+}
+@media screen and (min-width:1260px) {
+/*　for PC　*/
+/*　画面サイズが1024px以上はここを読み込む
+表示ﾚｲｱｳﾄの幅を1024pxで設定(1frなし時)
+*/
+body {
+   display: grid;
+   display: -ms-grid;
+  justify-content: center;  /*グリッド全体を中央に寄せる設定 */
+   grid-template-columns: 250px minmax(400px, 660px) 250px 250px;/*max1024px*/
+   grid-template-rows: 100px 300px 1fr 250px;
+   -ms-grid-columns: 250px minmax(400px, 660px) 250px 250px;/*max1024px*/
+   -ms-grid-rows: 100px 300px 1fr 250px;
+   grid-gap: 1px;
+   grid-template-areas:
+    "logo gnav gnav mail"
+    "main_photo main_photo main_photo main_photo"
+    "main main main main"
+    "footer footer footer footer";
+}
+/*
+.item_header {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
+	grid-area: header;
+}
+
+.item_nav {
+	-ms-grid-row: 2;
+	-ms-grid-column: 1;
+	grid-area: nav;
+}
+
+.item_main {
+	-ms-grid-row: 2;
+	-ms-grid-column: 2;
+	grid-area: main;
+}
+
+.item_sidebar {
+	-ms-grid-row: 2;
+	-ms-grid-column: 3;
+	grid-area: sidebar;
+}
+
+.item_footer {
+	-ms-grid-row: 3;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
+	grid-area: footer;
+}
+*/
+nav {
+  grid-area: gnav;
+}
+.container{
+  width:700px;
+  height:100px;    
+}
+
+.gblnv_block_class{
+ margin-top: 10px;
+}
+
+.collapse{
+  width:700px;
+  margin:0 auto;
+  display:table;
+  font-size:16px;
+  list-style: none;
+}
+.navbar-nav li{
+  display:table-cell;
+  vertical-align:middle;
+}
+.navbar-nav a{
+  height:80px;
+  width:100%;
+  display:table-cell;
+  text-align:center;
+  vertical-align:middle;
+  background:#000;
+  color:#fff;
+  border-right:1px solid red;
+ }
+ #fa li.menu-item a span {
+  font-size:10px;
+  font-size:10rem;
+  color: #999;
+  text-shadow: 0 1px #fff;
+  text-align: center;
+  font-family: verdana, Arial, Helvetica, sans-serif;
+}
+ 
+.navbar-nav li:first-child a{
+  border-left:1px solid red;
+}
+.navbar-nav li a:hover{
+  background:#999;
+}
+
+.navbar-brand{
+    display: none;
+}
+
+#mail a .example_mail{
+ left: 50%;
+ min-height: 100%;
+ min-width: 100%;
+ position: absolute;
+ top:50%;
+ transform: translate(-50%, -50%);
+}
+}
+
