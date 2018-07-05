@@ -120,8 +120,6 @@
     
 <h2 class="sectionLabel l-column">Content</h2>
 
-
-
 <h2 class="sectionLabel l-column TestLabel">Test font</h2>
 
 <h2><img src="<?php bloginfo('template_url'); ?>/images/top/ttl_tour.png"

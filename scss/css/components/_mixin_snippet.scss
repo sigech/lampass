@@ -1,6 +1,38 @@
 @charset "utf-8";
 @import 'compass';
 
+/*モバイルファースト:モバイルが選択されたあとに上書きで以下の条件選択*/
+/* iPhone 縦 */
+/*　for iPhone Landscape　(iPhone 横)　*/
+/*　画面サイズが480pxからはここを読み込む　*/
+// スマートフォン表示用メディアクエリmixin
+//ブレークポイント
+@mixin mq-sp($min: $for_iPhone_Landscape) {
+    @media only screen and (min-width: #{$min}) {
+        @content;
+    }
+}
+/*　for iPad 　*/
+/*　画面サイズが768pxから1024pxまではここを読み込む　*/
+// ﾀﾌﾞﾚｯﾄ表示用メディアクエリmixin
+// ブレークポイント
+@mixin mq-ipd($min: $for_iPad_min, $max: $for_iPad_max) {
+    @media only screen and (min-width: #{$min}) and (max-width: #{$max}) {
+        @content;
+    }
+}
+/*　for PC　*/
+/*　画面サイズが1024px以上はここを読み込む
+表示ﾚｲｱｳﾄの幅を1024pxで設定(1frなし時)
+*/
+// デスクトップ表示用メディアクエリmixin
+// ブレークポイント
+@mixin mq-pc($min: $for_pc_width) {
+    @media only screen and (min-width: #{$min}) {
+        @content;
+    }
+}
+
 @mixin center {	//上下左右中央配置
     text-align: center;
     position: relative;
